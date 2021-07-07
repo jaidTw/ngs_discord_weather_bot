@@ -115,7 +115,7 @@ async def check_storm():
         print(f"[DEBUG] next_storm={next_time}, delta={next_time - now}")
 
     candidate = list(filter(
-        lambda x: timedelta(minutes=NOTIFY_BEFORE + 100) > x[1].time - now >= timedelta(minutes=NOTIFY_BEFORE)
+        lambda x: timedelta(minutes=NOTIFY_BEFORE + 1) > x[1].time - now >= timedelta(minutes=NOTIFY_BEFORE)
     , enumerate(storms)))
 
     if any(candidate):
