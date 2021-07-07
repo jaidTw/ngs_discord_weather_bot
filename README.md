@@ -19,5 +19,8 @@ A sample dataset based on [@liruk's work](https://docs.google.com/spreadsheets/d
 ## Configuration
 Set `INPUT_TZ` to the timezone of the dataset and `OUTPUT_TZ` to the timezone for results to be shown in.
 
+## TODO
+* Full localization in English and Japanese
+
 ## License
 MIT
