@@ -123,7 +123,10 @@ async def check_storm():
         msg = notification_msg[LANG][0]
         msg += '> ' + str(next_storm) + '\n'
         msg += notification_msg[LANG][1]
-        msg += '\n'.join(map(str, storms[idx + 1:idx + NEXT_STORM_COUNT]))
+        if len(storms) > 1:
+            msg += '\n'.join(map(str, storms[idx + 1:idx + NEXT_STORM_COUNT]))
+        else:
+            msg += '暫無資料'
         await bot.get_channel(CHANNEL).send(msg)
 
 @check_storm.before_loop
